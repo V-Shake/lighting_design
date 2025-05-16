@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibition Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <main>
+        <div class="toggle-buttons">
+            <button onclick="showSection('brazier-demo')">Brazier Demo Video</button>
+            <button onclick="showSection('brazier-renderings')">Brazier Renderings</button>
+            <button onclick="showSection('light-paths')">Light Paths</button>
+            <button onclick="showSection('stairs-and-doors')">Stairs and Doors</button>
+            <button onclick="showSection('nature-demo')">Nature Lights Demo Video</button>
+            <button onclick="showSection('nature')">Nature Lights Renderings</button>
+        </div>
+
+        <div id="brazier-demo" class="section">
+            <video controls autoplay loop muted>
+                <source src="assets/videos/brazier-demo/fire_animation.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div id="brazier-renderings" class="section" style="display:none;">
+            <div class="gallery-container">
+                <div class="main-image">
+                    <img id="current-brazier" src="assets/images/brazier-renderings/image1.png" alt="Brazier Rendering">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail active" src="assets/images/brazier-renderings/image1.png" alt="Brazier Rendering" data-index="0">
+                    <img class="thumbnail" src="assets/images/brazier-renderings/image2.png" alt="Brazier Rendering" data-index="1">
+                    <img class="thumbnail" src="assets/images/brazier-renderings/image3.png" alt="Brazier Rendering" data-index="2">
+                </div>
+            </div>
+        </div>
+
+        <div id="light-paths" class="section" style="display:none;">
+            <div class="gallery-container">
+                <div class="main-image">
+                    <img id="current-light" src="assets/images/light-paths/image1.png" alt="Light Path">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail active" src="assets/images/light-paths/image1.png" alt="Light Path" data-index="0">
+                    <img class="thumbnail" src="assets/images/light-paths/image2.png" alt="Light Path" data-index="1">
+                    <!-- <img class="thumbnail" src="assets/images/light-paths/image3.png" alt="Light Path" data-index="2"> -->
+                </div>
+            </div>
+        </div>
+
+        <div id="stairs-and-doors" class="section" style="display:none;">
+            <div class="gallery-container">
+                <div class="main-image">
+                    <img id="current-stairs" src="assets/images/stairs-and-doors/image1.png" alt="Stairs and Doors">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail active" src="assets/images/stairs-and-doors/image1.png" alt="Stairs and Doors" data-index="0">
+                    <img class="thumbnail" src="assets/images/stairs-and-doors/image2.png" alt="Stairs and Doors" data-index="1">
+                    <img class="thumbnail" src="assets/images/stairs-and-doors/image3.png" alt="Stairs and Doors" data-index="2">
+                </div>
+            </div>
+        </div>
+
+        <div id="nature-demo" class="section" style="display:none;">
+            <video controls autoplay loop muted>
+                <source src="assets/videos/nature-demo/nature.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div id="nature" class="section" style="display:none;">
+            <div class="gallery-container">
+                <div class="main-image">
+                    <img id="current-nature" src="assets/images/nature/image1.png" alt="Nature">
+                </div>
+                <div class="thumbnails">
+                    <img class="thumbnail active" src="assets/images/nature/image1.png" alt="Nature" data-index="0">
+                    <img class="thumbnail" src="assets/images/nature/image2.png" alt="Nature" data-index="1">
+                    <img class="thumbnail" src="assets/images/nature/image3.png" alt="Nature" data-index="2">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
